@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="CarRentalController">
+  <ClassDiagramComponents>
+    <Class name="client" package="" visibility="public" xPosition="30.0" yPosition="58.0">
+      <Fields>
+        <Field name="myFC" type="FrontController" visibility="private"/>
+        <Field name="myW" type="Welcome" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="FrontController" package="" visibility="public" xPosition="337.0" yPosition="41.0">
+      <Fields>
+        <Field name="myDispatcher" type="Dispatcher" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="authenticateUser" returnType="void" visibility="public"/>
+        <Method name="doTracking" returnType="void" visibility="public"/>
+        <Method name="dispatchRequest" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Dispatcher" package="" visibility="public" xPosition="320.0" yPosition="319.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="dispatch" returnType="Request" visibility="public">
+          <Argument type="Request" name="req"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="OrderController" package="" visibility="public" xPosition="588.0" yPosition="28.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="CarController" package="" visibility="public" xPosition="588.0" yPosition="135.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="StatController" package="" visibility="public" xPosition="588.0" yPosition="344.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="GarageController" package="" visibility="public" xPosition="588.0" yPosition="240.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Welcome" package="" visibility="public" xPosition="30.0" yPosition="240.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public"/>
+        <Method name="menu" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="myDispatcher" source="Dispatcher" target="FrontController" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="myWelcome" source="Welcome" target="client" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="myFrontController" source="FrontController" target="client" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
