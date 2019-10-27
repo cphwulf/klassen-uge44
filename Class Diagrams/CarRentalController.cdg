@@ -2,7 +2,7 @@
 
 <ClassDiagram name="CarRentalController">
   <ClassDiagramComponents>
-    <Class name="client" package="" visibility="public" xPosition="30.0" yPosition="58.0">
+    <Class name="client" package="" visibility="public" xPosition="30.0" yPosition="41.0">
       <Fields>
         <Field name="myFC" type="FrontController" visibility="private"/>
         <Field name="myW" type="Welcome" visibility="private"/>
@@ -50,7 +50,7 @@
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="Welcome" package="" visibility="public" xPosition="30.0" yPosition="240.0">
+    <Class name="Welcome" package="" visibility="public" xPosition="30.0" yPosition="302.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -60,8 +60,8 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="myDispatcher" source="Dispatcher" target="FrontController" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
     <UseRelation name="myWelcome" source="Welcome" target="client" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation name="myFrontController" source="FrontController" target="client" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="myDispatcher" source="Dispatcher" target="FrontController" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>

@@ -2,39 +2,32 @@
 
 <ClassDiagram name="CarRental">
   <ClassDiagramComponents>
-    <Class name="Car" package="" visibility="public" xPosition="692.0" yPosition="176.0">
+    <Class name="Car" package="" visibility="public" xPosition="653.0" yPosition="192.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="Employee" package="" visibility="public" xPosition="315.0" yPosition="35.0">
+    <Class name="Employee" package="" visibility="public" xPosition="253.0" yPosition="26.0">
       <Fields/>
       <Constructors/>
       <Methods>
-        <Method name="calcPrice" returnType="void" visibility="public"/>
-        <Method name="getMilage" returnType="void" visibility="public"/>
-        <Method name="setMilage" returnType="void" visibility="public"/>
+        <Method name="showMenu" returnType="void" visibility="public"/>
+        <Method name="createOrder" returnType="void" visibility="public"/>
+        <Method name="showCars" returnType="void" visibility="public"/>
+        <Method name="runStats" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Garage" package="" visibility="public" xPosition="692.0" yPosition="320.0">
+    <Class name="Garage" package="" visibility="public" xPosition="495.0" yPosition="333.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="CarFactory" package="" visibility="public" xPosition="238.0" yPosition="417.0">
-      <Fields/>
-      <Constructors/>
-      <Methods>
-        <Method name="importCar" returnType="Car" visibility="public"/>
-        <Method name="createCarsFromFile" returnType="HashMap" visibility="public"/>
-      </Methods>
-    </Class>
-    <Class name="PriceCalc" package="" visibility="public" xPosition="554.0" yPosition="35.0">
+    <Class name="PriceCalc" package="" visibility="public" xPosition="561.0" yPosition="35.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="RentalOrder" package="" visibility="public" xPosition="24.0" yPosition="337.0">
+    <Class name="RentalOrder" package="" visibility="public" xPosition="253.0" yPosition="237.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -42,22 +35,10 @@
         <Method name="editOrder" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Customer" package="" visibility="public" xPosition="791.0" yPosition="35.0">
+    <Class name="Customer" package="" visibility="public" xPosition="811.0" yPosition="35.0">
       <Fields/>
       <Constructors/>
       <Methods/>
-    </Class>
-    <Class name="RentalEmployee" package="" visibility="public" xPosition="448.0" yPosition="207.0">
-      <Fields/>
-      <Constructors/>
-      <Methods/>
-    </Class>
-    <Class name="RentalAdmin" package="" visibility="public" xPosition="251.0" yPosition="207.0">
-      <Fields/>
-      <Constructors/>
-      <Methods>
-        <Method name="canImportCars" returnType="void" visibility="public"/>
-      </Methods>
     </Class>
     <Class name="Main" package="" visibility="public" xPosition="36.0" yPosition="35.0">
       <Fields>
@@ -68,22 +49,11 @@
         <Method name="runProgram" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="CarRentalUI" package="" visibility="public" xPosition="36.0" yPosition="207.0">
-      <Fields/>
-      <Constructors/>
-      <Methods>
-        <Method name="ShowMenu" returnType="void" visibility="public"/>
-      </Methods>
-    </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <IsRelation name="is" source="RentalEmployee" target="Employee"/>
-    <UseRelation name="importCarsFromFile" source="CarFactory" target="RentalAdmin" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="getType" source="PriceCalc" target="Car" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="calcPrice" source="Employee" target="PriceCalc" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation name="getBonusPoints" source="PriceCalc" target="Customer" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation name="parkCar" source="Car" target="Garage" sourceCardinality="0..*" targetCardinality="0..1"/>
-    <UseRelation name="calcPrice" source="Employee" target="PriceCalc" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="userMenu" source="CarRentalUI" target="Main" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="RentalAdmin" target="Employee"/>
-    <UseRelation name="getType" source="PriceCalc" target="Car" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
